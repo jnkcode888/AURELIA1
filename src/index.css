@@ -1,0 +1,99 @@
+/* PLEASE NOTE: THESE TAILWIND IMPORTS SHOULD NEVER BE DELETED */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Syncopate:wght@400;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* DO NOT DELETE THESE TAILWIND IMPORTS, OTHERWISE THE STYLING WILL NOT RENDER AT ALL */
+@layer base {
+  :root {
+    --color-electric-blue: 0, 116, 217;
+    --color-rose-gold: 248, 131, 121;
+    --color-violet: 123, 44, 191;
+    --color-cosmic-black: 10, 0, 20;
+  }
+  html, body {
+    @apply font-sans bg-black text-white;
+    scroll-behavior: smooth;
+  }
+  .font-orbitron {
+    font-family: 'Orbitron', sans-serif;
+  }
+  .font-syncopate {
+    font-family: 'Syncopate', sans-serif;
+  }
+  .text-electric-blue {
+    color: rgb(var(--color-electric-blue));
+  }
+  .text-rose-gold {
+    color: rgb(var(--color-rose-gold));
+  }
+  .bg-electric-blue {
+    background-color: rgb(var(--color-electric-blue));
+  }
+  .bg-rose-gold {
+    background-color: rgb(var(--color-rose-gold));
+  }
+  .bg-grid-pattern {
+    background-size: 50px 50px;
+    background-image:
+      linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  }
+}
+@layer utilities {
+  .animate-fadeIn {
+    animation: fadeIn 1s forwards;
+  }
+  .animate-in {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+  }
+  .animation-delay-300 {
+    animation-delay: 300ms;
+  }
+  .animation-delay-700 {
+    animation-delay: 700ms;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+@keyframes pulse {
+  0% {
+    opacity: 0.4;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0.8;
+    transform: scale(1.1);
+  }
+}
+@keyframes equalizer {
+  0% {
+    height: 5%;
+  }
+  100% {
+    height: 100%;
+  }
+}
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
