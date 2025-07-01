@@ -47,6 +47,9 @@ export const Navigation = () => {
         {/* Mobile Menu Panel */}
         <div className={`fixed top-0 right-0 w-64 h-full bg-black/95 backdrop-blur-xl md:hidden transform transition-transform duration-300 ease-in-out ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
           <div className="flex flex-col items-center pt-20 px-6">
+            <a href="/" onClick={handleLinkClick} className="relative w-full text-center py-4 text-white/80 hover:text-electric-blue transition-colors duration-300 font-syncopate text-sm tracking-wider border-b border-white/10">
+              Home
+            </a>
             {['About', 'Voice', 'Modeling', 'Reels', 'Connect'].map(item => <a key={item} href={`#${item.toLowerCase()}`} onClick={handleLinkClick} className="relative w-full text-center py-4 text-white/80 hover:text-electric-blue transition-colors duration-300 font-syncopate text-sm tracking-wider border-b border-white/10">
                 {item}
               </a>)}
